@@ -1,6 +1,5 @@
-# "Typescript for Beginners"
 
-### Full Course - ?? Chapters
+## Forked to follow along with Dave Grey's excellent course. Thank you Dave!
 
 ---
 
