@@ -1,18 +1,20 @@
 "use strict";
-let stringArr = ['one', 'hey', 'Dave'];
+let stringArr = ['one', 'hey', 'keller'];
 let guitars = ['Strat', 'Les Paul', 5150];
 let mixedData = ['EVH', 1984, true];
-stringArr[0] = 'John';
+stringArr[0] = 'Keller';
 stringArr.push('hey');
 guitars[0] = 1984;
-guitars.unshift('Jim');
+guitars.unshift('jim');
+guitars = stringArr;
+mixedData = guitars;
 let test = [];
 let bands = [];
 bands.push('Van Halen');
 // Tuple 
-let myTuple = ['Dave', 42, true];
-let mixed = ['John', 1, false];
-myTuple[1] = 42;
+let myTuple = ['Keller', 21, false];
+let mixed = ['John', 1, true];
+myTuple[1] = 43;
 // Objects
 let myObj;
 myObj = [];
@@ -20,10 +22,11 @@ console.log(typeof myObj);
 myObj = bands;
 myObj = {};
 const exampleObj = {
-    prop1: 'Dave',
+    prop1: 'Nick',
     prop2: true,
 };
-exampleObj.prop1 = 'John';
+exampleObj.prop1 = 'Keller';
+;
 let evh = {
     name: 'Eddie',
     active: false,
@@ -33,6 +36,7 @@ let jp = {
     active: true,
     albums: ['I', 'II', 'IV']
 };
+evh = jp;
 const greetGuitarist = (guitarist) => {
     if (guitarist.name) {
         return `Hello ${guitarist.name.toUpperCase()}!`;
@@ -40,8 +44,7 @@ const greetGuitarist = (guitarist) => {
     return 'Hello!';
 };
 console.log(greetGuitarist(jp));
-// Enums 
-// "Unlike most TypeScript features, Enums are not a type-level addition to JavaScript but something added to the language and runtime."
+// Enums
 var Grade;
 (function (Grade) {
     Grade[Grade["U"] = 1] = "U";
@@ -50,4 +53,5 @@ var Grade;
     Grade[Grade["B"] = 4] = "B";
     Grade[Grade["A"] = 5] = "A";
 })(Grade || (Grade = {}));
+;
 console.log(Grade.U);

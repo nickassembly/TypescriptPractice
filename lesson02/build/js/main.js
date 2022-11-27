@@ -1,9 +1,9 @@
 "use strict";
-let myName = 'Dave';
+let myName = 'Nick';
 let meaningOfLife;
 let isLoading;
 let album;
-myName = 'John';
+myName = 'Keller';
 meaningOfLife = 42;
 isLoading = true;
 album = 5150;
