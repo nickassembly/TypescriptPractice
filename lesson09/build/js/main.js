@@ -19,18 +19,18 @@ const assign1 = {
 };
 console.log(updateAssignment(assign1, { grade: 95 }));
 const assignGraded = updateAssignment(assign1, { grade: 95 });
-// Required and Readonly 
+// Required and Readonly
 const recordAssignment = (assign) => {
     // send to database, etc. 
     return assign;
 };
 const assignVerified = Object.assign(Object.assign({}, assignGraded), { verified: true });
 recordAssignment(Object.assign(Object.assign({}, assignGraded), { verified: true }));
-// Record 
+// Record Type
 const hexColorMap = {
     red: "FF0000",
     green: "00FF00",
-    blue: "0000FF",
+    blue: "0000FF"
 };
 const finalGrades = {
     Sara: "B",
@@ -38,7 +38,7 @@ const finalGrades = {
 };
 const gradeData = {
     Sara: { assign1: 85, assign2: 93 },
-    Kelly: { assign1: 76, assign2: 15 },
+    Kelly: { assign1: 76, assign2: 15 }
 };
 const score = {
     studentId: "k123",
@@ -46,9 +46,9 @@ const score = {
 };
 const preview = {
     studentId: "k123",
-    title: "Final Project",
+    title: "Final Project"
 };
-// ReturnType 
+// ReturnType
 //type newAssign = { title: string, points: number }
 const createNewAssign = (title, points) => {
     return { title, points };
@@ -59,7 +59,7 @@ const assignArgs = ["Generics", 100];
 const tsAssign2 = createNewAssign(...assignArgs);
 console.log(tsAssign2);
 const fetchUsers = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield fetch('https://jsonplaceholder.typicode.com/users').then(res => {
+    const data = yield fetch('https:/jsonplaceholder.typicode.com/users').then(res => {
         return res.json();
     }).catch(err => {
         if (err instanceof Error)
