@@ -8,6 +8,7 @@ console.log(isObj('John'));
 console.log(isObj([1, 2, 3]));
 console.log(isObj({ name: 'John' }));
 console.log(isObj(null));
+///////////////////////////////////
 const isTrue = (arg) => {
     if (Array.isArray(arg) && !arg.length) {
         return { arg, is: false };
@@ -41,11 +42,12 @@ const checkBoolValue = (arg) => {
     return { value: arg, is: !!arg };
 };
 const processUser = (user) => {
-    // process the user with logic here 
+    // process user with logic
     return user;
 };
 console.log(processUser({ id: 1, name: 'Dave' }));
 //console.log(processUser({ name: 'Dave'}))
+///////////////////////////////////////
 const getUsersProperty = (users, key) => {
     return users.map(user => user[key]);
 };
@@ -99,6 +101,7 @@ const usersArray = [
 ];
 console.log(getUsersProperty(usersArray, "email"));
 console.log(getUsersProperty(usersArray, "username"));
+///////////////////////////////////////
 class StateObject {
     constructor(value) {
         this.data = value;
