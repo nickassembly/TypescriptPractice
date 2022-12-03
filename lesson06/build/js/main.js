@@ -14,10 +14,10 @@ class Coder {
         return `Hello, I'm ${this.age}`;
     }
 }
-const Dave = new Coder('Dave', 'Rock', 42);
-console.log(Dave.getAge());
-// console.log(Dave.age)
-// console.log(Dave.lang)
+const Nick = new Coder('Nick', 'Punk', 43);
+console.log(Nick.getAge());
+// console.log(Nick.age);
+// console.log(Nick.lang);
 class WebDev extends Coder {
     constructor(computer, name, music, age) {
         super(name, music, age);
@@ -29,7 +29,6 @@ class WebDev extends Coder {
     }
 }
 const Sara = new WebDev('Mac', 'Sara', 'Lofi', 25);
-console.log(Sara.getLang());
 class Guitarist {
     constructor(name, instrument) {
         this.name = name;
@@ -41,26 +40,24 @@ class Guitarist {
 }
 const Page = new Guitarist('Jimmy', 'guitar');
 console.log(Page.play('strums'));
-//////////////////////////////////////
 class Peeps {
+    static getCount() {
+        return Peeps.count;
+    }
     constructor(name) {
         this.name = name;
         this.name = name;
         this.id = ++Peeps.count;
-    }
-    static getCount() {
-        return Peeps.count;
     }
 }
 Peeps.count = 0;
 const John = new Peeps('John');
 const Steve = new Peeps('Steve');
 const Amy = new Peeps('Amy');
+console.log(John.id);
 console.log(Amy.id);
 console.log(Steve.id);
-console.log(John.id);
 console.log(Peeps.count);
-//////////////////////////////////
 class Bands {
     constructor() {
         this.dataState = [];
@@ -77,9 +74,9 @@ class Bands {
             throw new Error('Param is not an array of strings');
     }
 }
-const MyBands = new Bands();
-MyBands.data = ['Neil Young', 'Led Zep'];
-console.log(MyBands.data);
-MyBands.data = [...MyBands.data, 'ZZ Top'];
-console.log(MyBands.data);
-MyBands.data = ['Van Halen', 5150];
+const myBands = new Bands();
+myBands.data = ['Neil Young', 'Led Zep'];
+console.log(myBands.data);
+myBands.data = [...myBands.data, 'ZZ Top'];
+console.log(myBands.data);
+myBands.data = ['Van Halen', 5150];
