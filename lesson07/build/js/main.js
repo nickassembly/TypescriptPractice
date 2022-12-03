@@ -1,9 +1,12 @@
 "use strict";
-// Index Signatures 
+// interface TransactionObj {
+//    readonly [index: string]: number 
+// }
 const todaysTransactions = {
     Pizza: -10,
     Books: -5,
     Job: 50,
+    Dave: 43
 };
 console.log(todaysTransactions.Pizza);
 console.log(todaysTransactions['Pizza']);
@@ -17,14 +20,14 @@ const todaysNet = (transactions) => {
     return total;
 };
 console.log(todaysNet(todaysTransactions));
-//todaysTransactions.Pizza = 40
-console.log(todaysTransactions['Dave']); // undefined
+//todaysTransactions.Pizza = 40;
+console.log(todaysTransactions['Dave']);
 const student = {
     name: "Doug",
-    GPA: 3.5,
+    GPA: 3.4,
     classes: [100, 200]
 };
-// console.log(student.test)
+//console.log(student.test);
 for (const key in student) {
     console.log(`${key}: ${student[key]}`);
 }
